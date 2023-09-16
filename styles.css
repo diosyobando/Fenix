@@ -54,88 +54,49 @@ button {
 /* Button area */
 .container-contact .btn {
     position: relative;
-    font-size: 1.5em;
-    font-weight: 400;
-    color: black;
-    padding: 10px 30px;
-    transition: .5;
-}
-
-.container-contact .btn:hover {
-    color: #A51771;
-}
-
-.container-contact .btn span{
+    width: 146px;
+    height: 40px;
+    padding: 11px 10px;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    transition: 1s ease-in-out;
+    text-align: center;
+  }
+  
+.container-contact svg {
     position: absolute;
-    display: block;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #A51771;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+    border: 1px solid black;
+  }
+  
+.container-contact  .btn:hover {
+    transition: 1s ease-in-out;
     background: #A51771;
+  }
+  
+.container-contact  .btn:hover svg {
+    stroke-dashoffset: -480;
+    border: 1px solid #FDC600;
+  }
+
+.container-contact  .btn:hover span {
+    transition: 1s ease-in-out;
+    color: #fff;
 }
 
-.container-contact .btn span:nth-child(1){
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 2px;
-    transform-origin: left;
-    transform: scaleX(0);
-    transition: transform 0.2s;
-    transition-delay: 0.45s;
-}
-
-.container-contact .btn:hover span:nth-child(1){
-    transition: transform 0.2s;
-    transform: scaleX(1);
-}
-
-.container-contact .btn span:nth-child(2){
-    right: 0;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    transform-origin: top;
-    transform: scaleY(0);
-    transition: transform 0.2s;
-    transition-delay: 0.3s;
-}
-
-.container-contact .btn:hover span:nth-child(2){
-    transition: transform 0.2s;
-    transform: scaleY(1);
-    transition-delay: 0.1s;
-}
-
-.container-contact .btn span:nth-child(3){
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 0.2s;
-    transition-delay: 0.15s;
-}
-
-.container-contact .btn:hover span:nth-child(3){
-    transition: transform 0.2s;
-    transform: scaleX(1);
-    transition-delay: 0.2s;
-}
-
-.container-contact .btn span:nth-child(4){
-    left: 0;
-    bottom: 0;
-    width: 2px;
-    height: 100%;
-    transform-origin: bottom;
-    transform: scaleY(0);
-    transition: transform 0.2s;
-}
-
-.container-contact .btn:hover span:nth-child(4){
-    transition: transform 0.2s;
-    transform: scaleY(1);
-    transition-delay: 0.3s;
-}
+.container-contact  .btn span {
+    color: black;
+    font-size: 17px;
+    font-weight: 400;
+    transition: 1s ease-in-out;
+  }
 /* // */
 /* // */
 
