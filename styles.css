@@ -16,6 +16,8 @@ button:focus {
   outline: none;
 }
 
+/*--------MAIN-------- */
+
 .container-main {
     position: relative;
     width: 100%;
@@ -101,7 +103,46 @@ nav ul li a:hover {
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
+/*--------ABOUT FENIX-------- */    
+/* Estilo para el contenedor principal */
+.container-about {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .about-image {
+    width: 150px; /* Tamaño pequeño */
+    margin-right: 20px; /* Margen derecho de la pantalla */
+    float: right; /* Colocar a la derecha de la pantalla */
+  }
+  
+  .vector-image {
+    width: 100px; /* Tamaño pequeño */
+    margin-top: 10px; /* Margen superior para separar de la imagen "About Image" */
+  }
+  
+  .about-title {
+    margin-left: 20px; /* Margen izquierdo */
+  }
+  
+  .about-title span {
+    color: purple; /* Color morado para FENIX */
+  }
+  
+  .about-title {
+    color: yellow; /* Color amarillo para ABOUT */
+  }
+  
+  .about-paragraph {
+    clear: both; /* Asegura que el párrafo esté debajo del título y las imágenes */
+  }
+  
 
+
+  
 /* FIXME: ITO AREA */
 
 /* Container de services */
