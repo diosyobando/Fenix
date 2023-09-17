@@ -3,6 +3,7 @@
     padding: 0;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
+    /* cursor: none; */
 }
 
 button {
@@ -15,6 +16,30 @@ textarea:focus,
 button:focus {
   outline: none;
 }
+
+*::selection {
+    background-color: purple;
+    color: white;
+}
+
+*::-webkit-scrollbar {
+    /* width: 0.25rem;
+    height: 0.25rem; */
+    width: 0;
+    height: 0;
+}
+
+/* .cursor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: yellow;
+    transition: 0.05s;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+} */
 
 .container-main {
     position: relative;
@@ -110,10 +135,52 @@ nav ul li a:hover {
     justify-content: space-between;
 }
 
-.container-services .background-img img {
+.container-services .background-img .img-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.container-services .background-img .img-container {
+    position: relative;
     width: 50%;
+    overflow: hidden;
+}
+
+.container-services .background-img .img-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
+
+.container-services .background-img .img-container .centered-btn {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.container-services .background-img .img-container .centered-btn.right {
+    left: auto;
+    right: 0;
+    background: #FFC700;
+}
+
+.container-services .background-img .img-container .centered-btn.left {
+    background: #000;
+    color: #FFC700;
+}
+
 /* // */
 
 /* Container de contacto */
@@ -214,7 +281,7 @@ nav ul li a:hover {
  .modal-content {
      width: 60%; 
      height: 70%;
-     background: rgba(255, 255, 255, 0.30);
+     background: rgba(255, 255, 255, 0.5);
      margin: 5% auto; 
      padding: 20px;
      border-radius: 14px;
@@ -263,7 +330,7 @@ nav ul li a:hover {
     backdrop-filter: blur(5px);
     border: none;
     border-radius: 10px;
-    box-shadow: 3px 4px 9px 0px rgba(180, 180, 180, 0.45);
+    box-shadow: 3px 4px 9px 0px rgba(156, 156, 156, 0.45);
     padding-left: 20px;
 }
 
@@ -275,7 +342,7 @@ nav ul li a:hover {
 
 .modal form input::placeholder, 
 .modal form textarea::placeholder{
-    color: #959595;
+    color: #8e8e8e;
     font-weight: 400;
 }
 
@@ -286,6 +353,7 @@ nav ul li a:hover {
      color: #747373;
      float: right;
      font-size: 28px;
+     transition: .5s;
  }
 
  .close:hover,
@@ -293,6 +361,7 @@ nav ul li a:hover {
      color: yellow;
      text-decoration: none;
      cursor: pointer;
+     transition: .5s;
  }
  /* // fin boton x */
 
