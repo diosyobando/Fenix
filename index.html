@@ -50,8 +50,8 @@
     <!-- Services -->
     <div class="container-services">
         <div class="background-img">
-            <!-- <img class="img" src="src/imageSource2.png"> -->
-            <!-- <img class="img" src="src/imageSource.jpg"> -->
+            <img class="img" src="src/imageSource2.png"> 
+            <img class="img" src="src/imageSource.jpg">
         </div>
     </div>
     <!-- // -->
@@ -75,8 +75,31 @@
         <!-- Estructura básica de un popup -->
         <div id="myModal" class="modal">
             <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>¡Hola! Este es tu contenido pop up.</p>
+
+                <span class="close">&times;</span>
+                <label class="contact-label">Contact Us</label>
+
+                <form action="">
+                    <div class="input-field">
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="Enter your name" required autocomplete="on">
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="Enter your email  address" required autocomplete="on">
+                        </div>
+                        <div class="input-field">
+                            <label>Phone Number</label>
+                            <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+                    <div class="input-field" id="textarea">
+                        <label>Message</label>
+                        <textarea name="message" rows="5" placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
 
