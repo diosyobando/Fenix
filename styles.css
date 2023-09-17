@@ -5,6 +5,17 @@
     font-family: 'Roboto', sans-serif;
 }
 
+button {
+    all: unset;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
 .container-main {
     position: relative;
     width: 100%;
@@ -90,16 +101,8 @@ nav ul li a:hover {
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
-button {
-    all: unset;
-}
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: none;
-}
+/* FIXME: ITO AREA */
 
 /* Container de services */
 .container-services .background-img {
@@ -130,6 +133,7 @@ button:focus {
 }
 
 .container-contact .contact-form .title {
+    margin-left: -14%;
     font-size: 22px;
     font-weight: 400;
     line-height: normal;
