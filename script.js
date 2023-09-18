@@ -26,3 +26,24 @@ document.addEventListener('mousemove', (e) => {
 });
 //
 
+// Services
+// select all button
+const buttons = document.querySelectorAll(".centered-btn");
+
+// attach click event listener to each button
+buttons.forEach((button) => {
+  button.addEventListener("click", function (event) {
+    // get parent container
+    let parentContainer = event.target.parentElement;
+
+    // check if container is 'left' or 'right' then change color
+    if (parentContainer.classList.contains('left')) {
+      parentContainer.style.background = 'black';
+    }
+
+    if (parentContainer.classList.contains('right')) {
+      parentContainer.style.background = 'black';
+    }
+  });
+});
+//
