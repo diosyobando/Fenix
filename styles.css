@@ -103,12 +103,13 @@ button:focus {
     color: black;
     background: white;
 
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
 }
 
 .container-contact .square-wrapper button:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(185, 185, 185, 0.126), 0 6px 6px rgba(35, 35, 35, 0.23);
+    transition: all 0.8s ease;
 }
 /* Fin Contact us button */
 
@@ -142,6 +143,8 @@ button:focus {
    font-weight: 400;
    font-size: 30px;
    left: 40%;   
+   text-transform: uppercase;
+   font-family: 'Chakra Petch', sans-serif;
 }
 
 /* Inputs  */
@@ -165,7 +168,10 @@ button:focus {
 }
 
 .input-field label {
+ margin-left: 5px;
  margin-bottom: 10px;
+ font-weight: 400;
+ color: #FFD600;
 }
 .modal-content #textarea {
  margin-top: 10px;
@@ -195,9 +201,10 @@ button:focus {
    font-weight: 400;
 }
 
+
 /* // fin inputs */
 
-/* El botón para cerrar el popup */
+/* Botón para cerrar el popup */
 .close {
     color: #000;
     float: right;
@@ -251,7 +258,7 @@ button:focus {
 .container-contact .square-backround {
     width: 40rem;
     height: 25rem;
-    background: rgba(30, 0, 57, .77);
+    background: rgba(30, 0, 57, .70);
     backdrop-filter: blur(14px);
     border-top-left-radius: 80px;
 }

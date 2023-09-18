@@ -27,26 +27,4 @@ document.addEventListener('mousemove', (e) => {
 //
 
 // Services
-// select all button
-// First we get the button and div elements
-var btnProjectManagement = document.getElementById('btnProjectManagement');
-var btnGeneralContractor = document.getElementById('btnGeneralContractor');
-var divAmparito = document.getElementById('amparito');
-var divItolito = document.getElementById('itolito');
-
-// When the page initially loads, the divs will be hidden
-divAmparito.style.display = 'none';
-divItolito.style.display = 'none';
-
-// When the Project Management button is clicked, show AMPARITO and hide Itolito
-btnProjectManagement.addEventListener('click', function(e){
-    divAmparito.style.display = 'block';
-    divItolito.style.display = 'none';
-});
-
-// When the General Contractor button is clicked, show Itolito and hide AMPARITO
-btnGeneralContractor.addEventListener('click', function(e){
-    divAmparito.style.display = 'none';
-    divItolito.style.display = 'block';
-});
 //
