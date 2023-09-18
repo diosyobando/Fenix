@@ -128,6 +128,8 @@ nav ul li a:hover {
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
+
+
 /* -----------------ABOUT------------------------- */
 
 .container-about {
@@ -136,24 +138,30 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
+    height: 900px;
   }
   
   .about-image {
     position: relative;
-    left: 20rem;
-    top: 20rem;
-    width: 150px;
-  }
+    left: 70%;
+    top: 10rem;
+    width: 350px;
+    z-index: 2;
+  } 
   
   .vector-image {
     position: relative;
-    left: 20rem;
-    top: 0;
-    width: 100px; /* Tamaño pequeño */
+    left: 51rem;
+    top: -25rem;
+    width: 150px; /* Tamaño pequeño */
     margin-top: 10px; /* Margen superior para separar de la imagen "About Image" */
+    z-index: 1;
   }
   
   .about-title {
+    position: relative;
+    left: 100px;
+    top: -40rem;
     margin-left: 20px; /* Margen izquierdo */
   }
   
@@ -162,12 +170,19 @@ nav ul li a:hover {
   }
   
   .about-title {
-    color: yellow; /* Color amarillo para ABOUT */
+    color: #FFC700; /* Color amarillo para ABOUT */
   }
   
   .about-paragraph {
-    clear: both; /* Asegura que el párrafo esté debajo del título y las imágenes */
-  }
+    position: relative;
+    left: 100px;
+    top: -40rem;
+    margin-left: 20px; /* Margen izquierdo */
+    max-width: 500px; /* Ancho máximo del párrafo */
+    line-height: 1.5; /* Espacio entre líneas */
+    white-space: normal; /* Forzar saltos de línea */
+}
+
 /* --------------------------------------------------- */
 /* FIXME: ITO AREA */
 
