@@ -186,7 +186,7 @@ nav ul li a:hover {
 /* --------------------------------------------------- */
 /* FIXME: ITO AREA */
 
-/* Container de services */
+/*  --------------- Container de services --------------- */
 .container-services .background-img {
     display: flex;
     justify-content: space-between;
@@ -257,7 +257,7 @@ nav ul li a:hover {
 
 /* // */
 
-/* Container de contacto */
+/*  --------------- Container de contacto  --------------- */
 .container-contact .contact-form {
     display: flex;
     flex-direction: column;
@@ -289,7 +289,7 @@ nav ul li a:hover {
     line-height: normal;
 }
 
-/* Button area */
+/* Button */
 .container-contact .btn {
     position: relative;
     width: 146px;
@@ -314,26 +314,24 @@ nav ul li a:hover {
     border: 1px solid black;
   }
   
-.container-contact  .btn:hover {
-    transition: 1s ease-in-out;
-    background: #A51771;
-  }
-  
 .container-contact  .btn:hover svg {
     stroke-dashoffset: -480;
+    transition: 1s ease-in-out;
     border: 1px solid #FDC600;
+    background: #A51771;
   }
 
 .container-contact  .btn:hover span {
+    position: relative;
     transition: 1s ease-in-out;
     color: #fff;
+    z-index: 1;
 }
 
 .container-contact  .btn span {
     color: black;
     font-size: 17px;
     font-weight: 400;
-    transition: 1s ease-in-out;
   }
 /* // */
 
