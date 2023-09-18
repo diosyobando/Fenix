@@ -28,22 +28,25 @@ document.addEventListener('mousemove', (e) => {
 
 // Services
 // select all button
-const buttons = document.querySelectorAll(".centered-btn");
+// First we get the button and div elements
+var btnProjectManagement = document.getElementById('btnProjectManagement');
+var btnGeneralContractor = document.getElementById('btnGeneralContractor');
+var divAmparito = document.getElementById('amparito');
+var divItolito = document.getElementById('itolito');
 
-// attach click event listener to each button
-buttons.forEach((button) => {
-  button.addEventListener("click", function (event) {
-    // get parent container
-    let parentContainer = event.target.parentElement;
+// When the page initially loads, the divs will be hidden
+divAmparito.style.display = 'none';
+divItolito.style.display = 'none';
 
-    // check if container is 'left' or 'right' then change color
-    if (parentContainer.classList.contains('left')) {
-      parentContainer.style.background = 'black';
-    }
+// When the Project Management button is clicked, show AMPARITO and hide Itolito
+btnProjectManagement.addEventListener('click', function(e){
+    divAmparito.style.display = 'block';
+    divItolito.style.display = 'none';
+});
 
-    if (parentContainer.classList.contains('right')) {
-      parentContainer.style.background = 'black';
-    }
-  });
+// When the General Contractor button is clicked, show Itolito and hide AMPARITO
+btnGeneralContractor.addEventListener('click', function(e){
+    divAmparito.style.display = 'none';
+    divItolito.style.display = 'block';
 });
 //
