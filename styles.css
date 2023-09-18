@@ -139,12 +139,16 @@ nav ul li a:hover {
   }
   
   .about-image {
-    width: 150px; /* Tamaño pequeño */
-    margin-right: 20px; /* Margen derecho de la pantalla */
-    float: right; /* Colocar a la derecha de la pantalla */
+    position: relative;
+    left: 20rem;
+    top: 20rem;
+    width: 150px;
   }
   
   .vector-image {
+    position: relative;
+    left: 20rem;
+    top: 0;
     width: 100px; /* Tamaño pequeño */
     margin-top: 10px; /* Margen superior para separar de la imagen "About Image" */
   }
@@ -219,6 +223,21 @@ nav ul li a:hover {
     color: #FFC700;
 }
 
+.img-container.right  div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 3;
+}
+
+.img-container.left  div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    z-index: 3;
+}
 /* Transicion overlay */
 
 /* // */
