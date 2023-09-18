@@ -50,16 +50,89 @@ button:focus {
 /* --------------------------- */
 
 /* → → → Container Contact */
+.container-contact {
+    position: relative;
+}
+
+/* Cuadrado de contacto */
+.container-contact .square-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    color: white;
+}
+
+.container-contact .square-wrapper .text {
+    position: relative;
+    top: 22rem;
+    left: 12rem;
+    z-index: 2;
+}
+
+.text::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px; 
+    background-color: #7600E8; 
+    border-radius: 5px;
+    left: -3rem; 
+}
+
+.container-contact .square-wrapper h1 {
+    font-size: 65px;
+    width: 20rem;
+    font-weight: 400;
+    margin-left: 10px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.container-contact .square-wrapper button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    width: 12rem;
+    justify-content: center;
+    padding: 20px;
+    
+    border-radius: 12px;
+    color: black;
+    background: white;
+}
+
+.container-contact .square-wrapper button span {
+    font-weight: 500;
+    font-size: 21px;
+}
+
+.container-contact .square-wrapper button img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.container-contact .square-backround {
+    width: 40rem;
+    height: 25rem;
+    background: rgba(30, 0, 57, .77);
+    backdrop-filter: blur(14px);
+    border-top-left-radius: 80px;
+}
+/* Fin Cuadrado de contacto */
 
 .container-contact .background-img {
     background-image: url('src/Footer background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Ajuste esto a la altura que desee */
+    height: 100vh;
+    transform: scaleX(-1);
 }
+/* Cierre Container Footer ← ← ← */
 
-/* Footer */
+/* → → → Footer */
 .container-footer {
     width: 100%;
     height: 200px;
@@ -118,5 +191,4 @@ button:focus {
     color: #AAAAAA;
 }
 /* Fin Copyrigth */
-/* Fin Footer */
-/* Cierre Container Contact ← ← ← */
+/* Cierre Container Footer ← ← ← */
