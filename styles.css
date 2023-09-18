@@ -37,7 +37,7 @@ button:focus {
 
 /* --------------------------- */
 
-/* → → → Container About FIXME:*/
+/* → → → Container About */
 
 /* Cierre Container About ← ← ← */
 
@@ -49,6 +49,74 @@ button:focus {
 
 /* --------------------------- */
 
-/* → → → Container Contact FIXME:*/
+/* → → → Container Contact */
 
+.container-contact .background-img {
+    background-image: url('src/Footer background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ajuste esto a la altura que desee */
+}
+
+/* Footer */
+.container-footer {
+    width: 100%;
+    height: 200px;
+    color: #fff;
+    background: #1A0033;
+}
+
+/* Logo FIXME: Falta el boton para subir tocando el fenix*/ 
+.container-footer .container-info .logo{
+    align-content: center; 
+    margin-right: 13rem;
+    margin-top: 28px;
+}
+
+.container-footer .container-info .logo img {
+    width: 6.2rem;
+}
+/* Fin Logo */
+
+/* List */
+.container-footer .container-info {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 18px;
+}
+
+.container-footer .nav .list-item{
+    padding:7px;
+    margin-right: 15rem;
+    cursor: pointer;
+}
+
+.container-footer .contact-info .list-item{
+    padding: 7px;
+}
+
+.container-footer .nav .list-item.about{
+    margin-top: 20px;
+}
+
+.container-footer .contact-info .list-item.phone{
+    font-size: 30px;
+    font-weight: 400;
+}
+/* Fin List */
+
+/* Copyrigth */
+.container-footer .copyrigth {
+    position: relative;
+    left: 10%;
+    bottom: -20%;
+}
+
+.container-footer .copyrigth span {
+    color: #AAAAAA;
+}
+/* Fin Copyrigth */
+/* Fin Footer */
 /* Cierre Container Contact ← ← ← */
