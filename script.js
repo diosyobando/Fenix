@@ -22,14 +22,13 @@ window.addEventListener("scroll", function () {
       header.style.padding = "20px"; // Restaura el espaciado interno original del header
   }
 });
-
-
+// 
 
 // Función para volver al inicio al hacer clic en el logo
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
+// 
 
 
 // Contact Us Pop Up animation
