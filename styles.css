@@ -190,6 +190,7 @@ button:focus {
 
 .container-about .square-background .title {
     position: relative;
+    top: 3rem;
     left: 10rem;
     color: white;
     font-size: 4.5rem;
@@ -199,6 +200,7 @@ button:focus {
 
 .square-background .p1 {
     position: relative;
+    top: 4rem;
     left: 10rem;
     color: white;
 }
@@ -218,6 +220,7 @@ button:focus {
 .container-about .background-img {
     align-self: flex-end;
     width: 30rem;
+    transform: scaleX(-1);
 }
 
 .container-about .fenix-img img, 
