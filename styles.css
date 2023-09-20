@@ -32,7 +32,141 @@ button:focus {
 
 
 /* → → → Container Main */
+.container-main {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Esto asegura que el contenedor sea del tamaño de la ventana */
+    overflow: hidden;
+}
 
+/* Estilos para el video de fondo */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que el video cubra todo el contenedor */
+    z-index: -1; /* Coloca el video detrás del contenido principal */
+}
+/* Estilos generales del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Para hacer el header fijo en la parte superior */
+    width: 100%;
+    background-color: transparent; /* Fondo transparente inicial */
+    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+    padding: 20px; /* Espaciado interno */
+    color: white; /* Color del texto */
+    z-index: 999; /* Para asegurarse de que esté en la parte superior */
+}
+
+/* Estilos para el logo */
+.logo img {
+    max-width: 100px; /* Ajusta el tamaño del logo según tus preferencias */
+    height: auto;
+    margin-top: 10px; /* Agregar margen superior */
+    margin-left: 20px; /* Agregar margen izquierdo */
+    cursor: pointer; /* Cambiar el cursor al hacer clic en el logo */
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espacio entre elementos de navegación */
+}
+
+nav ul li {
+    font-size: 16px; /* Tamaño de fuente para los elementos de navegación */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Color del texto de los enlaces */
+    font-weight: 400; /* Texto en negrita */
+    margin-right: 40px; /* Espacio desde el margen derecho */
+}
+
+/* Cambiar el color del texto de los enlaces al pasar el cursor sobre ellos */
+nav ul li a:hover {
+    color: #FFC700;
+    border-bottom: 2px solid #FFC700; /* Agregar línea debajo del texto */
+    padding-bottom: 3px; /* Espacio entre el texto y la línea */
+    transition: border-bottom 0.3s ease; /* Agregar transición suave */
+}
+
+
+/* Estilos para los párrafos */
+.title {
+    position: absolute;
+    top: 60%; /* Centra verticalmente en relación con el contenedor principal */
+    left: 100px; /* Ajusta el espaciado desde el borde izquierdo */
+    transform: translateY(-50%); /* Corrige la alineación vertical */
+    text-align: left;
+}
+
+.light-text {
+    font-size: 30px;
+    color: #FFC700; /* Color del primer párrafo */
+    font-weight: lighter; /* Texto ligero */
+    margin-bottom: 10px; /* Espacio inferior entre los párrafos */
+}
+
+.bold-text {
+    font-size: 60px;
+    color: #fff; /* Color del segundo párrafo */
+    font-weight: bold; /* Texto en negrita */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+/* Estilo para el div "subtitle" */
+.subtitle {
+    background-color: white; /* Fondo blanco */
+    position: absolute; /* Posicionamiento absoluto para ubicarlo en el lado derecho */
+    bottom: 0; /* Lo anclamos en la parte inferior */
+    right: 0; /* Lo anclamos en el lado derecho */
+    width: 50%; /* Ancho inicial del 50% del contenedor principal (ajusta según tus necesidades) */
+    padding: 20px; /* Espacio alrededor del contenido */
+    box-sizing: border-box; /* El padding se incluye en el ancho */
+    transition: width 0.5s; /* Transición suave para el cambio de ancho */
+  }
+  
+  /* Estilo para los párrafos dentro de "subtitle" */
+  .subtitle p {
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 1rem; /* Tamaño de fuente inicial relativo */
+  }
+
+  /* Estilo para el primer párrafo "sub1" */
+.sub1 {
+    position: relative;
+    float: left; /* Hace que este párrafo se coloque a la izquierda del segundo párrafo */
+
+    width: 50%; /* Ocupa inicialmente el 50% del ancho del div "subtitle" */
+    clear: none; /* Elimina el efecto clear para que los párrafos estén uno al lado del otro */
+    top: 10px; 
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  
+  .sub2 {
+    float: left; /* Hace que este párrafo se coloque a la izquierda del primer párrafo */
+    width: 50%; /* Ocupa inicialmente el 50% del ancho del div "subtitle" */
+    clear: none; /* Elimina el efecto clear para que los párrafos estén uno al lado del otro */
+  }
+  
+  
+  /* Establecer el ancho completo para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .subtitle {
+      width: 100%; /* Hacer que el div ocupe todo el ancho de la pantalla */
+    }
+  }
+  
+  
 /* Cierre Container Main ← ← ← */
 
 /* --------------------------- */
