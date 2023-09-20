@@ -40,7 +40,7 @@ button:focus {
 }
 
 /* Estilos para el video de fondo */
-.bg-video {
+.container-main .bg-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -50,7 +50,7 @@ button:focus {
     z-index: -1; /* Coloca el video detrás del contenido principal */
 }
 /* Estilos generales del header */
-header {
+.container-main header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +64,7 @@ header {
 }
 
 /* Estilos para el logo */
-.logo img {
+.container-main .logo img {
     max-width: 100px; /* Ajusta el tamaño del logo según tus preferencias */
     height: auto;
     margin-top: 10px; /* Agregar margen superior */
@@ -73,34 +73,35 @@ header {
 }
 
 /* Estilos para la barra de navegación */
-nav ul {
+.container-main nav ul {
     list-style: none;
     display: flex;
     gap: 20px; /* Espacio entre elementos de navegación */
 }
 
-nav ul li {
-    font-size: 16px; /* Tamaño de fuente para los elementos de navegación */
+.container-main nav ul li {
+    font-size: 16px; /* Tamaño de fuente para los elementos de navegación */   
 }
 
-nav ul li a {
+.container-main nav ul li a {
     text-decoration: none;
     color: white; /* Color del texto de los enlaces */
     font-weight: 400; /* Texto en negrita */
     margin-right: 40px; /* Espacio desde el margen derecho */
+    transition: border-bottom 0.3s ease;
 }
 
 /* Cambiar el color del texto de los enlaces al pasar el cursor sobre ellos */
-nav ul li a:hover {
+.container-main nav ul li a:hover {
     color: #FFC700;
-    border-bottom: 2px solid #FFC700; /* Agregar línea debajo del texto */
-    padding-bottom: 3px; /* Espacio entre el texto y la línea */
+    border-bottom: 2px solid #FFC700; 
+    padding-bottom: 3px;
     transition: border-bottom 0.3s ease; /* Agregar transición suave */
 }
 
 
 /* Estilos para los párrafos */
-.title {
+.container-main .title {
     position: absolute;
     top: 60%; /* Centra verticalmente en relación con el contenedor principal */
     left: 100px; /* Ajusta el espaciado desde el borde izquierdo */
@@ -108,14 +109,14 @@ nav ul li a:hover {
     text-align: left;
 }
 
-.light-text {
+.container-main .light-text {
     font-size: 30px;
     color: #FFC700; /* Color del primer párrafo */
     font-weight: lighter; /* Texto ligero */
     margin-bottom: 10px; /* Espacio inferior entre los párrafos */
 }
 
-.bold-text {
+.container-main .bold-text {
     font-size: 60px;
     color: #fff; /* Color del segundo párrafo */
     font-weight: bold; /* Texto en negrita */
@@ -123,7 +124,7 @@ nav ul li a:hover {
 }
 
 /* Estilo para el div "subtitle" */
-.subtitle {
+.container-main .subtitle {
     background-color: white; /* Fondo blanco */
     position: absolute; /* Posicionamiento absoluto para ubicarlo en el lado derecho */
     bottom: 0; /* Lo anclamos en la parte inferior */
@@ -135,13 +136,13 @@ nav ul li a:hover {
   }
   
   /* Estilo para los párrafos dentro de "subtitle" */
-  .subtitle p {
+  .container-main .subtitle p {
     margin: 0; /* Elimina el margen predeterminado */
     font-size: 1rem; /* Tamaño de fuente inicial relativo */
   }
 
   /* Estilo para el primer párrafo "sub1" */
-.sub1 {
+  .container-main .sub1 {
     position: relative;
     float: left; /* Hace que este párrafo se coloque a la izquierda del segundo párrafo */
 
@@ -152,7 +153,7 @@ nav ul li a:hover {
     font-weight: 400;
   }
   
-  .sub2 {
+  .container-main  .sub2 {
     float: left; /* Hace que este párrafo se coloque a la izquierda del primer párrafo */
     width: 50%; /* Ocupa inicialmente el 50% del ancho del div "subtitle" */
     clear: none; /* Elimina el efecto clear para que los párrafos estén uno al lado del otro */
@@ -166,41 +167,57 @@ nav ul li a:hover {
     }
   }
   
-  
 /* Cierre Container Main ← ← ← */
 
 /* --------------------------- */
 
 /* → → → Container About */
+.container-about {
+    margin-top: 50px;
+    height: 100vh;
+}
 
 .container-about .square-background {
-    position: relative;
-    top: 34rem;
+    position: absolute;
     left: -5rem;
-    width: 80rem;
-    height: 25rem;
+    width: 65rem;
+    height: 28rem;
     background: rgba(30, 0, 57, .70);
     backdrop-filter: blur(12px);
     border-radius: 60px;
     z-index: 2;
 }
 
+.container-about .square-background .title {
+    position: relative;
+    left: 10rem;
+    color: white;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.square-background .p1 {
+    position: relative;
+    left: 10rem;
+    color: white;
+}
+
 /* Imagenes de Fondo */
 .container-about .img-wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 80px 0;
 }
 
 .container-about .fenix-img {
     align-self: flex-start;
     z-index: 2;
+    mix-blend-mode: difference;
 }
 
 .container-about .background-img {
     align-self: flex-end;
     width: 30rem;
-    background: aqua;
 }
 
 .container-about .fenix-img img, 
@@ -334,18 +351,18 @@ nav ul li a:hover {
 .input-field {
  display: flex;
  flex-direction: column;
- flex: 1; /* So that each input field takes up the same space in a row */
+ flex: 1; 
  
 }
 .input-field label {
- margin-left: 5px;
- margin-bottom: 10px;
- font-weight: 400;
-}
-.modal-content #textarea {
- margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    font-weight: 400;
 }
 
+.modal-content #textarea {
+    margin-top: 10px;
+}
 
 .modal form input, 
 .modal form textarea{
