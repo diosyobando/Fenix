@@ -235,7 +235,33 @@ button:focus {
 /* --------------------------- */
 
 /* → → → Container Services */
-
+/* Estilo para la imagen project.png */
+.project img {
+    width: 50%; /* Tamaño mediano */
+    float: left; /* Pegado al lado izquierdo de la pantalla */
+  }
+  
+  /* Estilo para el título con clase titleProject */
+  .titleProject {
+    color: yellow; /* Color amarillo */
+  }
+  
+  /* Estilo para el párrafo parrafoProject */
+  .parrafoProject {
+    clear: both; /* Asegura que esté debajo del título */
+  }
+  
+  /* Estilo para la clase projectFondo */
+  .projectFondo {
+    width: 40rem;
+    height: 25rem;
+    background: rgba(30, 0, 57, 0.7);
+    backdrop-filter: blur(14px);
+    border-top-left-radius: 80px;
+    padding: 20px; /* Espaciado interior para contenido */
+    margin-top: 20px; /* Espacio superior */
+  }
+      
 /* Cierre Container Services ← ← ← */
 
 /* --------------------------- */
