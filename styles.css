@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
 }
@@ -35,7 +36,7 @@ button:focus {
 .container-main {
     position: relative;
     width: 100%;
-    height: 100vh; /* Esto asegura que el contenedor sea del tamaño de la ventana */
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -60,7 +61,7 @@ button:focus {
     transition: background-color 0.3s ease; /* Transición suave para el fondo */
     padding: 20px; /* Espaciado interno */
     color: white; /* Color del texto */
-    z-index: 999; /* Para asegurarse de que esté en la parte superior */
+    z-index: 999;
 }
 
 /* Estilos para el logo */
@@ -173,16 +174,25 @@ button:focus {
 
 /* → → → Container About */
 .container-about {
+    position: relative;
     margin-top: 50px;
     height: 100vh;
 }
 
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Cuadro de informacion */
 .container-about .square-background {
     position: absolute;
     left: -5rem;
-    width: 65rem;
+    width: 75rem;
     height: 28rem;
-    background: rgba(30, 0, 57, .70);
+    background: rgba(30, 0, 57, .80);
     backdrop-filter: blur(12px);
     border-radius: 60px;
     z-index: 2;
@@ -196,38 +206,44 @@ button:focus {
     font-size: 4.5rem;
     text-transform: uppercase;
     font-family: 'Chakra Petch', sans-serif;
+    z-index: 4;
 }
 
-.square-background .p1 {
+.container-about .square-background .p1 {
     position: relative;
+    width: 55%;
+    text-align: justify;
     top: 4rem;
     left: 10rem;
     color: white;
+    line-height: 160.523%;
+    letter-spacing: .25px;
+    z-index: 4;
 }
+/* Fin Cuadro de informacion */
 
 /* Imagenes de Fondo */
-.container-about .img-wrapper {
-    display: flex;
-    justify-content: space-between;
+.background {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
 }
 
-.container-about .fenix-img {
-    align-self: flex-start;
-    z-index: 2;
-    mix-blend-mode: difference;
+.fenix, .engineer {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  height: 50vh; /* Ajusta este valor según tus necesidades */
 }
 
-.container-about .background-img {
-    align-self: flex-end;
-    width: 30rem;
-    transform: scaleX(-1);
+.fenix {
+  background-image: url('src/Purple-Fenix.png');
 }
 
-.container-about .fenix-img img, 
-.container-about .background-img img {
-    width: 100%;
-    height: auto;
+.engineer {
+  background-image: url('src/About-background.jpg');
 }
+
 /* Fin Imagenes de Fondo */
 
 /* Cierre Container About ← ← ← */
