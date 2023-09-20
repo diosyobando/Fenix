@@ -25,10 +25,8 @@ button:focus {
 }
 
 *::-webkit-scrollbar {
-    /* width: 0.25rem;
-    height: 0.25rem; */
-    /* width: 0;
-    height: 0; */
+    width: 0;
+    height: 0;
 }
 /* Cierre Configuraciones Generales ← ← ← */
 
@@ -62,7 +60,7 @@ button:focus {
     transition: background-color 0.3s ease; /* Transición suave para el fondo */
     padding: 20px; /* Espaciado interno */
     color: white; /* Color del texto */
-    z-index: 999;
+    z-index: 99;
 }
 
 /* Estilos para el logo */
@@ -231,7 +229,8 @@ button:focus {
 /* Imagenes de Fondo */
 .container-about .background {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .container-about .fenix {
@@ -242,9 +241,8 @@ button:focus {
 }
 
 .container-about .engineer {
-    max-width: 60%;
+    max-width: 45%;
     height: 100vh;
-    margin-left: 35rem;
 }
 /* Fin Imagenes de Fondo */
 
@@ -277,6 +275,7 @@ button:focus {
     top: 22rem;
     left: 12rem;
     z-index: 2;
+    overflow: visible;
 }
 
 .text::before {
@@ -326,7 +325,7 @@ button:focus {
 .modal {
     display: none; 
     position: fixed; 
-    z-index: 1; 
+    z-index: 99; 
     left: 0;
     top: 0;
     width: 100%; 
@@ -338,25 +337,33 @@ button:focus {
 
 /* Estilos para el contenido del popup */
 .modal-content {
+    position: relative;
     width: 60%; 
-    height: 70%;
+    height: 75%;
     background: rgba(255, 255, 255, 0.5);
     margin: 5% auto; 
     padding: 20px;
     border-radius: 14px;
     backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
 }
 
 .modal-content .contact-label {
-   position: relative;
-   font-weight: 400;
-   font-size: 30px;
-   left: 40%;   
-   text-transform: uppercase;
-   font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 /* Inputs  */
+.modal form {
+    overflow: visible;
+}
+
 .modal .row {
  width: 100%;
  margin-top: 20px;
@@ -411,8 +418,11 @@ button:focus {
 
 /* Botón para cerrar el popup */
 .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 40px;
     color: #000;
-    float: right;
     font-size: 28px;
     transition: .5s;
 }
@@ -431,14 +441,15 @@ button:focus {
    width: 90px;
    height: 40px;
    position: relative; 
-   top: 25px;
-   left: 45%;  
+   top: 2rem;
+   left: 50%;
    background: rgb(0, 0, 0);
    text-align: center;
    border-radius: 5px;
    transition: .5s;
    font-weight: 400;
    color: white;
+   transform: translate(-50%,-50%);
 }
 
 .modal-content button:hover {
@@ -487,8 +498,9 @@ button:focus {
     background: #1A0033;
 }
 
-/* Logo FIXME: Falta el boton para subir tocando el fenix*/ 
-.container-footer .container-info .logo{
+/* Logo*/ 
+.container-footer .container-info .logo {
+    cursor: pointer;
     align-content: center; 
     margin-right: 13rem;
     margin-top: 28px;
