@@ -41,14 +41,29 @@ button:focus {
 
 .container-about .square-background {
     position: relative;
-    top: 34rem;
     left: -5rem;
+    top: 37rem;
     width: 80rem;
-    height: 25rem;
+    height: 28rem;
     background: rgba(30, 0, 57, .70);
     backdrop-filter: blur(12px);
     border-radius: 60px;
     z-index: 2;
+}
+
+.square-background .title {
+    position: relative;
+    left: 10rem;
+    color: white;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.square-background .p1 {
+    position: relative;
+    left: 10rem;
+    color: white;
 }
 
 /* Imagenes de Fondo */
@@ -66,7 +81,6 @@ button:focus {
 .container-about .background-img {
     align-self: flex-end;
     width: 30rem;
-    background: aqua;
 }
 
 .container-about .fenix-img img, 
@@ -200,18 +214,18 @@ button:focus {
 .input-field {
  display: flex;
  flex-direction: column;
- flex: 1; /* So that each input field takes up the same space in a row */
+ flex: 1; 
  
 }
 .input-field label {
- margin-left: 5px;
- margin-bottom: 10px;
- font-weight: 400;
-}
-.modal-content #textarea {
- margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    font-weight: 400;
 }
 
+.modal-content #textarea {
+    margin-top: 10px;
+}
 
 .modal form input, 
 .modal form textarea{
