@@ -260,13 +260,12 @@ button:focus {
 .container-services {
     position: relative;
     width: 100%;
-    background: rgba(30, 0, 57, 0.80); 
     padding: 3rem 0;
     overflow: hidden;
-  }
-  
-  /* Fondo creativo estilo clip-path */
-  .services-background {
+}
+
+/* Fondo creativo estilo clip-path */
+.services-background {
     position: absolute;
     left: -5rem;
     width: 65rem;
@@ -274,11 +273,11 @@ button:focus {
     background: rgba(30, 0, 57, 0.80);
     clip-path: polygon(85% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
     backdrop-filter: blur(12px);
-    z-index: -1;
-  }
-  
-  /* Contenedor del servicio */
-  .service {
+    z-index: -2; /* Asegura que el fondo esté detrás de la imagen */
+}
+
+/* Contenedor del servicio */
+.service {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -286,74 +285,78 @@ button:focus {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-  }
-  
-  /* Estilo de la imagen del servicio */
-  .project-img {
-    max-width: 300px; 
+}
+
+/* Estilo de la imagen del servicio */
+.project-img {
+    position: relative;
+    max-width: 500px;
     height: auto;
-    margin-left: 0%;
-    margin-right: 0; 
-  }
-  
-  /* Estilo del título del servicio */
-  .titleProject {
+    z-index: 1;
+    /* Agregar estilos para posicionar a la izquierda */
+    float: left; /* Hace que la imagen se coloque a la izquierda */
+    margin-right: 20px; /* Agrega un margen derecho para separarla de otros elementos */
+}
+
+/* Estilo del título del servicio */
+.titleProject {
     color: #FFC700;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  
-  /* Estilo del párrafo del servicio */
-  .parrafoProject {
+}
+
+/* Estilo del párrafo del servicio */
+.parrafoProject {
     color: #fff;
     font-size: 16px;
     margin-bottom: 20px;
-  }
-  
-  /* Estilo de la barra de iconos */
-  .iconBar {
+    clear: both; /* Añadir esta propiedad para asegurarse de que esté debajo del título */
+}
+
+
+/* Estilo de la barra de iconos */
+.iconBar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 20px;
-  }
-  
-  /* Estilo de cada icono y su texto */
-  .presentation,
-  .recursos,
-  .calidad,
-  .riesgos,
-  .comunication,
-  .presupuesto {
+}
+
+/* Estilo de cada icono y su texto */
+.presentation,
+.recursos,
+.calidad,
+.riesgos,
+.comunication,
+.presupuesto {
     text-align: center;
     color: #fff;
-    width: calc(33.33% - 10px); 
+    width: calc(33.33% - 10px);
     font-size: 12px;
-  }
-  
-  .presentation img,
-  .recursos img,
-  .calidad img,
-  .riesgos img,
-  .comunication img,
-  .presupuesto img {
+}
+
+.presentation img,
+.recursos img,
+.calidad img,
+.riesgos img,
+.comunication img,
+.presupuesto img {
     max-width: 50px;
     height: auto;
     margin: 0 auto 10px;
-  }
-  
-  .presentation-text,
-  .recursos-text,
-  .calidad-text,
-  .riesgos-text,
-  .comunication-text,
-  .presupuesto-text {
-    font-size: 10px; 
+}
+
+.presentation-text,
+.recursos-text,
+.calidad-text,
+.riesgos-text,
+.comunication-text,
+.presupuesto-text {
+    font-size: 10px;
     font-weight: bold;
-  }
-  
-  
+}
+
   
   
 /* Cierre Container Services ← ← ← */
