@@ -197,6 +197,7 @@ button:focus {
     clip-path: polygon(85% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
     backdrop-filter: blur(12px);
     z-index: 2;
+    animation: AnimSquare 2s ease 0s 1 normal forwards;
 }
 
 .container-about .square-background .title {
@@ -240,11 +241,13 @@ button:focus {
     height: auto;
     z-index: 3;
     mix-blend-mode: color;
+    animation: AnimLeft 2s ease 0s 1 normal forwards;
 }
 
 .container-about .engineer {
     max-width: 45%;
     height: 100vh;
+    animation: AnimRight 2s ease 0s 1 normal forwards;
 }
 /* Fin Imagenes de Fondo */
 
@@ -554,3 +557,45 @@ button:focus {
 }
 /* Fin Copyrigth */
 /* Cierre Container Footer ← ← ← */
+
+/* Animaciones */
+
+/* About */
+@keyframes AnimRight {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes AnimLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes AnimSquare {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(2rem);
+    }
+}
+
+
+/* Fin About */
+
+/* Fin Animaciones */
