@@ -256,7 +256,109 @@ button:focus {
 /* --------------------------- */
 
 /* → → → Container Services */
-
+/* Estilo para el contenedor principal */
+  
+  
+/* Estilo del contenedor principal */
+.container-services {
+    position: relative;
+    width: 100%;
+    background: rgba(30, 0, 57, 0.80); 
+    padding: 3rem 0;
+    overflow: hidden;
+  }
+  
+  /* Fondo creativo estilo clip-path */
+  .services-background {
+    position: absolute;
+    left: -5rem;
+    width: 65rem;
+    height: 23rem;
+    background: rgba(30, 0, 57, 0.80);
+    clip-path: polygon(85% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+    backdrop-filter: blur(12px);
+    z-index: -1;
+  }
+  
+  /* Contenedor del servicio */
+  .service {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Estilo de la imagen del servicio */
+  .project-img {
+    max-width: 300px; 
+    height: auto;
+    margin-left: 0%;
+    margin-right: 0; 
+  }
+  
+  /* Estilo del título del servicio */
+  .titleProject {
+    color: #FFC700;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo del párrafo del servicio */
+  .parrafoProject {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo de la barra de iconos */
+  .iconBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Estilo de cada icono y su texto */
+  .presentation,
+  .recursos,
+  .calidad,
+  .riesgos,
+  .comunication,
+  .presupuesto {
+    text-align: center;
+    color: #fff;
+    width: calc(33.33% - 10px); 
+    font-size: 12px;
+  }
+  
+  .presentation img,
+  .recursos img,
+  .calidad img,
+  .riesgos img,
+  .comunication img,
+  .presupuesto img {
+    max-width: 50px;
+    height: auto;
+    margin: 0 auto 10px;
+  }
+  
+  .presentation-text,
+  .recursos-text,
+  .calidad-text,
+  .riesgos-text,
+  .comunication-text,
+  .presupuesto-text {
+    font-size: 10px; 
+    font-weight: bold;
+  }
+  
+  
+  
+  
 /* Cierre Container Services ← ← ← */
 
 /* --------------------------- */
