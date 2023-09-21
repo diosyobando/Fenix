@@ -151,12 +151,14 @@ button:focus {
     top: 10px; 
     margin-bottom: 20px;
     font-weight: 400;
+    font-family: 'Inter', sans-serif;
   }
   
   .container-main  .sub2 {
     float: left; /* Hace que este párrafo se coloque a la izquierda del primer párrafo */
     width: 50%; /* Ocupa inicialmente el 50% del ancho del div "subtitle" */
     clear: none; /* Elimina el efecto clear para que los párrafos estén uno al lado del otro */
+    font-family: 'Inter', sans-serif;
   }
   
   
@@ -189,11 +191,11 @@ button:focus {
 .container-about .square-background {
     position: absolute;
     left: -5rem;
-    width: 55rem;
+    width: 65rem;
     height: 23rem;
     background: rgba(30, 0, 57, .80);
+    clip-path: polygon(85% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
     backdrop-filter: blur(12px);
-    border-radius: 60px;
     z-index: 2;
 }
 
@@ -475,6 +477,7 @@ button:focus {
     width: 40rem;
     height: 25rem;
     background: rgba(30, 0, 57, .70);
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
     backdrop-filter: blur(14px);
     border-top-left-radius: 80px;
 }
