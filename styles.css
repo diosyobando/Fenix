@@ -301,12 +301,12 @@ button:focus {
 .container-services {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 180vh;
     padding: 3rem 0;
   }
   
-  /* Fondo creativo estilo clip-path */
-  .services-background {
+  /* Project Management */
+  .container-pm .services-background {
     position: absolute;
     top: 7.5rem;
     right: 0;
@@ -324,7 +324,7 @@ button:focus {
   /* Contenedor del servicio */
   
   /* Estilo de la imagen del servicio */
-  .project-img {
+  .container-pm .project-img {
     position: relative;
     max-width: 600px; 
     height: auto;
@@ -332,27 +332,28 @@ button:focus {
   }
   
   /* Estilo del título del servicio */
-  .titleProject {
+  .container-pm .titleProject {
     color: #FFC700;
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 10px;  
     font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
   }
  
-  .service-txt {
+  .container-pm .service-txt {
     position: relative;
     top: 1rem;
     left: 40rem;
     transform: scaleX(-1);
   }
 
-  .service-txt p {
+  .container-pm  .service-txt p {
     width: 19rem;
   }
   
   /* Estilo del párrafo del servicio */
-  .parrafoProject {
+  .container-pm .parrafoProject {
       color: #fff;
       font-size: 16px;
       margin-bottom: 20px;
@@ -360,10 +361,10 @@ button:focus {
     /* // */
     
   /* Estilo de la barra de iconos */
-  .iconBar {
+  .container-pm  .iconBar {
     position: relative;
-    right: 15rem;
-    top: -1.6rem;
+    right: 19em;
+    top: -1.3rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -372,14 +373,14 @@ button:focus {
     width: 600px;
   }
   
-  .iconBar img {
+.container-pm .iconBar img {
     width:50px;
   }
-  .iconBar p {
+.container-pm .iconBar p {
     text-align: center;
   }
   
-  .iconBar .item {
+.container-pm .iconBar .item {
     width: 200px;
     margin-top: 40px;
     display: flex;
@@ -387,7 +388,99 @@ button:focus {
     align-items: center;
     color: white;
   }
+
+/* Cierre Project Management */
+
+/* General Contactor TODO:*/
+/* Estilo de la imagen del servicio */
+
+.container-gc .project-img {
+  position: relative;
+  max-width: 600px; 
+  height: auto;
+  float: right;
+  margin-top: 140px;
+}
+
+.container-gc .services-background {
+    position: absolute;
+    top: 45rem;
+    left: 0;
+    width: 65rem;
+    height: 19rem;
+    background: rgba(30, 0, 57, 0.80);
+    clip-path: polygon(85% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scaleX(1);
+  }
+    
+  /* Estilo del título del servicio */
+  .container-gc .titleProject {
+    color: #FFC700;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;  
+    font-family: 'Inter', sans-serif;
+    transform: scaleX(1);
+    text-align: right;
+
+  }
+ 
+  .container-gc .service-txt {
+    position: relative;
+    top: 1rem;
+    left: 40rem;
+    transform: scaleX(1);
+  }
+
+  .container-gc  .service-txt p {
+    width: 19rem;
+    text-align: right;
+
+  }
   
+  /* Estilo del párrafo del servicio */
+  .container-gc .parrafoProject {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 20px;
+      text-align: right;
+    }
+    /* // */
+    
+  /* Estilo de la barra de iconos */
+  .container-gc  .iconBar {
+    position: relative;
+    right: 19rem;
+    top: -1.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    width: 600px;
+    transform: scaleX(1);
+  }
+  
+.container-gc .iconBar img {
+    width:50px;
+  }
+.container-gc .iconBar p {
+    text-align: center;
+  }
+  
+.container-gc .iconBar .item {
+    width: 200px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }  
+/* Ciere Contactor */
+
 /* Cierre Container Services ← ← ← */
 
 /* --------------------------- */
