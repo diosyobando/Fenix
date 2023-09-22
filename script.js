@@ -1,3 +1,4 @@
+
 // Header
 window.addEventListener("scroll", function () {
   const header = document.getElementById("header");
@@ -31,6 +32,31 @@ function scrollToTop() {
 // 
 
 
+
+//ABOUT Funcion para animacion
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.querySelector(".container-about");
+  const windowHeight = window.innerHeight;
+
+  function checkVisibility() {
+      const containerTop = container.getBoundingClientRect().top;
+
+      if (containerTop < windowHeight) {
+          container.style.animation = "AnimRight 2s ease 0s 1 normal forwards";
+      } else {
+          container.style.animation = "none";
+      }
+  }
+
+  // Llama a la función inicialmente para verificar si la sección es visible al cargar la página
+  checkVisibility();
+
+  // Llama a la función cuando el usuario hace scroll
+  window.addEventListener("scroll", checkVisibility);
+});
+
+
+
 // Contact Us Pop Up animation
 var modal = document.getElementById('myModal');
 var btn = document.getElementById('btnShowPopup');
@@ -51,6 +77,99 @@ window.onclick = function(event) {
 }
 // 
 
+
+
+//SERVICES Funcion para animacion
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.querySelector(".container-pm");
+  const windowHeight = window.innerHeight;
+
+  function checkVisibility() {
+      const containerTop = container.getBoundingClientRect().top;
+
+      if (containerTop < windowHeight) {
+          container.style.animation = "AnimRight 2s ease 0s 1 normal forwards";
+      } else {
+          container.style.animation = "none";
+      }
+  }
+
+  // Llama a la función inicialmente para verificar si la sección es visible al cargar la página
+  checkVisibility();
+
+  // Llama a la función cuando el usuario hace scroll
+  window.addEventListener("scroll", checkVisibility);
+});
+
+
+
+// Contact Us Pop Up animation
+var modal = document.getElementById('myModal');
+var btn = document.getElementById('btnShowPopup');
+var span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function() {
+  modal.style.display = 'block';
+}
+
+span.onclick = function() {
+  modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+// 
+
+
+//CONTACT Funcion para animacion
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.querySelector(".container-contact");
+  const windowHeight = window.innerHeight;
+
+  function checkVisibility() {
+      const containerTop = container.getBoundingClientRect().top;
+
+      if (containerTop < windowHeight) {
+          container.style.animation = "AnimRight 2s ease 0s 1 normal forwards";
+      } else {
+          container.style.animation = "none";
+      }
+  }
+
+  // Llama a la función inicialmente para verificar si la sección es visible al cargar la página
+  checkVisibility();
+
+  // Llama a la función cuando el usuario hace scroll
+  window.addEventListener("scroll", checkVisibility);
+});
+
+
+
+// Contact Us Pop Up animation
+var modal = document.getElementById('myModal');
+var btn = document.getElementById('btnShowPopup');
+var span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function() {
+  modal.style.display = 'block';
+}
+
+span.onclick = function() {
+  modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+// 
+
+
+
 // Cursor
 const cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove', (e) => {
@@ -59,5 +178,3 @@ document.addEventListener('mousemove', (e) => {
 });
 //
 
-// Services
-//

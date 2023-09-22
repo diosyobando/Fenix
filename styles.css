@@ -1,4 +1,5 @@
 /* → → → Configuraciones Generales */
+
 *{
     margin: 0;
     padding: 0;
@@ -299,15 +300,23 @@ button:focus {
 /* → → → Container Services */
 /* Estilo para el contenedor principal */
   
-  
+  /* Estilo para ocultar los elementos inicialmente */
+
+
 /* Estilo del contenedor principal */
+
 .container-services {
     position: relative;
     width: 100%;
-    height: 180vh;
+    height: 140vh;
     padding: 3rem 0;
   }
-  
+  .container-pm {
+    animation: none; /* Desactiva la animación inicialmente */
+  }
+  .container-pm {
+    animation: AnimRight 50s ease 0s 1 normal forwards;
+  }
   /* Project Management */
   .container-pm .services-background {
     position: absolute;
@@ -332,7 +341,10 @@ button:focus {
     max-width: 600px; 
     height: auto;
     margin-left: 0;
+    animation: AnimRight 2s ease 0s 1 normal forwards;
   }
+
+
   
   /* Estilo del título del servicio */
   .container-pm .titleProject {
@@ -482,6 +494,9 @@ button:focus {
     align-items: center;
     color: white;
   }  
+
+
+  
 /* Ciere Contactor */
 
 /* Cierre Container Services ← ← ← */
@@ -500,6 +515,7 @@ button:focus {
     right: 0;
     z-index: 1;
     color: white;
+    animation: AnimRight 15s ease 0s 1 normal forwards;
 }
 
 .container-contact .square-wrapper .text {
