@@ -49,6 +49,11 @@ button:focus {
     object-fit: cover; /* Para que el video cubra todo el contenedor */
     z-index: -1; /* Coloca el video detrás del contenido principal */
 }
+
+.container-main ul {
+    height: 2rem;
+    overflow: visible;
+}
 /* Estilos generales del header */
 .container-main header {
     display: flex;
