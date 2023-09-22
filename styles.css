@@ -109,13 +109,12 @@ button:focus {
 /* Estilos para los párrafos */
 .container-main .title {
     position: absolute;
-    top: 60%; /* Centra verticalmente en relación con el contenedor principal */
-    left: 100px; /* Ajusta el espaciado desde el borde izquierdo */
-    transform: translateY(-50%); /* Corrige la alineación vertical */
+    top: 40%;
+    left: 100px;
     text-align: left;
-    opacity: 0; /* Inicialmente, establece la opacidad en 0 para ocultar el texto */
-    transform: translateY(-50px); /* Mueve el texto hacia arriba */
-    transition: opacity 0.5s, transform 0.5s; /* Transición para opacidad y transformación */
+    opacity: 0; 
+    transform: translateY(-50px);
+    transition: opacity 0.5s, transform 0.9s; 
 }
 
 .container-main .light-text {
@@ -134,25 +133,27 @@ button:focus {
 
 /* Estilo para el div "subtitle" */
 .container-main .subtitle {
-    background: rgba(255, 255, 255, .1); /* Fondo blanco */
-    position: absolute; /* Posicionamiento absoluto para ubicarlo en el lado derecho */
-    bottom: 0; /* Lo anclamos en la parte inferior */
-    right: 0; /* Lo anclamos en el lado derecho */
-    width: 50%; /* Ancho inicial del 50% del contenedor principal (ajusta según tus necesidades) */
-    padding: 20px; /* Espacio alrededor del contenido */
-    box-sizing: border-box; /* El padding se incluye en el ancho */
-    transition: width 0.5s; /* Transición suave para el cambio de ancho */
+    background: rgba(255, 255, 255, .1);
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+    width: 50%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    transition: width 0.5s; 
     clip-path:  polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 33%);
     backdrop-filter: blur(16px);
-    opacity: 0; /* Inicialmente, establece la opacidad en 0 para ocultar el texto */
-    transform: translateY(50px); /* Mueve el texto hacia abajo */
-    transition: opacity 0.5s, transform 0.5s; /* Transición para opacidad y transformación */
+    opacity: 0; 
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s; 
+
 }
 
 /* Estilo para los párrafos dentro de "subtitle" */
 .container-main .subtitle p {
-    margin: 0; /* Elimina el margen predeterminado */
+    margin: 0; 
     font-size: 1rem; /* Tamaño de fuente inicial relativo */
+    
 }
 
 /* Establecer el ancho completo para pantallas pequeñas */
