@@ -72,7 +72,10 @@ button:focus {
     margin-top: 10px; /* Agregar margen superior */
     margin-left: 20px; /* Agregar margen izquierdo */
     cursor: pointer; /* Cambiar el cursor al hacer clic en el logo */
+    transition: max-width 0.50s ease, src 0.50s ease; 
 }
+
+
 
 /* Estilos para la barra de navegación */
 .container-main nav ul {
