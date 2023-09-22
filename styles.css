@@ -2,10 +2,11 @@
 *{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
+    text-decoration: none;
 }
 
 button {
@@ -36,7 +37,7 @@ button:focus {
     position: relative;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* Estilos para el video de fondo */
@@ -52,6 +53,7 @@ button:focus {
 /* Estilos generales del header */
 .container-main header {
     display: flex;
+    overflow: visible;
     justify-content: space-between;
     align-items: center;
     position: fixed; /* Para hacer el header fijo en la parte superior */
@@ -77,10 +79,12 @@ button:focus {
     list-style: none;
     display: flex;
     gap: 20px; /* Espacio entre elementos de navegación */
+    overflow: visible;
 }
 
 .container-main nav ul li {
     font-size: 16px; /* Tamaño de fuente para los elementos de navegación */   
+    overflow: visible;
 }
 
 .container-main nav ul li a {
@@ -89,6 +93,7 @@ button:focus {
     font-weight: 400; /* Texto en negrita */
     margin-right: 40px; /* Espacio desde el margen derecho */
     transition: border-bottom 0.3s ease;
+    overflow: visible;
 }
 
 /* Cambiar el color del texto de los enlaces al pasar el cursor sobre ellos */
@@ -97,6 +102,7 @@ button:focus {
     border-bottom: 2px solid #FFC700; 
     padding-bottom: 3px;
     transition: border-bottom 0.3s ease; /* Agregar transición suave */
+    overflow: visible;
 }
 
 
@@ -125,7 +131,7 @@ button:focus {
 
 /* Estilo para el div "subtitle" */
 .container-main .subtitle {
-    background-color: white; /* Fondo blanco */
+    background: rgba(255, 255, 255, .1); /* Fondo blanco */
     position: absolute; /* Posicionamiento absoluto para ubicarlo en el lado derecho */
     bottom: 0; /* Lo anclamos en la parte inferior */
     right: 0; /* Lo anclamos en el lado derecho */
@@ -133,6 +139,8 @@ button:focus {
     padding: 20px; /* Espacio alrededor del contenido */
     box-sizing: border-box; /* El padding se incluye en el ancho */
     transition: width 0.5s; /* Transición suave para el cambio de ancho */
+    clip-path:  polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 33%);
+    backdrop-filter: blur(16px);
   }
   
   /* Estilo para los párrafos dentro de "subtitle" */
@@ -145,13 +153,14 @@ button:focus {
   .container-main .sub1 {
     position: relative;
     float: left; /* Hace que este párrafo se coloque a la izquierda del segundo párrafo */
-
     width: 50%; /* Ocupa inicialmente el 50% del ancho del div "subtitle" */
     clear: none; /* Elimina el efecto clear para que los párrafos estén uno al lado del otro */
     top: 10px; 
-    margin-bottom: 20px;
     font-weight: 400;
     font-family: 'Inter', sans-serif;
+    align-items: center;
+    text-align: center;
+    color: white;
   }
   
   .container-main  .sub2 {
@@ -159,6 +168,8 @@ button:focus {
     width: 50%; /* Ocupa inicialmente el 50% del ancho del div "subtitle" */
     clear: none; /* Elimina el efecto clear para que los párrafos estén uno al lado del otro */
     font-family: 'Inter', sans-serif;
+    color: white;
+    text-align: justify;
   }
   
   
@@ -197,6 +208,7 @@ button:focus {
     clip-path: polygon(85% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
     backdrop-filter: blur(12px);
     z-index: 2;
+    animation: AnimSquare 2s ease 0s 1 normal forwards;
 }
 
 .container-about .square-background .title {
@@ -240,11 +252,13 @@ button:focus {
     height: auto;
     z-index: 3;
     mix-blend-mode: color;
+    animation: AnimLeft 2s ease 0s 1 normal forwards;
 }
 
 .container-about .engineer {
     max-width: 45%;
     height: 100vh;
+    animation: AnimRight 2s ease 0s 1 normal forwards;
 }
 /* Fin Imagenes de Fondo */
 
@@ -260,101 +274,92 @@ button:focus {
 .container-services {
     position: relative;
     width: 100%;
-    background: rgba(30, 0, 57, 0.80); 
+    height: 100vh;
     padding: 3rem 0;
-    overflow: hidden;
   }
   
   /* Fondo creativo estilo clip-path */
   .services-background {
     position: absolute;
-    left: -5rem;
+    top: 7.5rem;
+    right: 0;
     width: 65rem;
-    height: 23rem;
+    height: 19rem;
     background: rgba(30, 0, 57, 0.80);
     clip-path: polygon(85% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
     backdrop-filter: blur(12px);
-    z-index: -1;
+    transform: scaleX(-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   /* Contenedor del servicio */
-  .service {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
   
   /* Estilo de la imagen del servicio */
   .project-img {
-    max-width: 300px; 
+    position: relative;
+    max-width: 600px; 
     height: auto;
-    margin-left: 0%;
-    margin-right: 0; 
+    margin-left: 0;
   }
   
   /* Estilo del título del servicio */
   .titleProject {
     color: #FFC700;
     font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-weight: 400;
+    margin-bottom: 10px;  
+    font-family: 'Inter', sans-serif;
+  }
+ 
+  .service-txt {
+    position: relative;
+    top: 1rem;
+    left: 40rem;
+    transform: scaleX(-1);
+  }
+
+  .service-txt p {
+    width: 19rem;
   }
   
   /* Estilo del párrafo del servicio */
   .parrafoProject {
-    color: #fff;
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    /* // */
+    
   /* Estilo de la barra de iconos */
   .iconBar {
+    position: relative;
+    right: 15rem;
+    top: -1.6rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: space-around;
+    transform: scaleX(-1);
+    align-content: center;
+    width: 600px;
   }
   
-  /* Estilo de cada icono y su texto */
-  .presentation,
-  .recursos,
-  .calidad,
-  .riesgos,
-  .comunication,
-  .presupuesto {
+  .iconBar img {
+    width:50px;
+  }
+  .iconBar p {
     text-align: center;
-    color: #fff;
-    width: calc(33.33% - 10px); 
-    font-size: 12px;
   }
   
-  .presentation img,
-  .recursos img,
-  .calidad img,
-  .riesgos img,
-  .comunication img,
-  .presupuesto img {
-    max-width: 50px;
-    height: auto;
-    margin: 0 auto 10px;
+  .iconBar .item {
+    width: 200px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
   }
-  
-  .presentation-text,
-  .recursos-text,
-  .calidad-text,
-  .riesgos-text,
-  .comunication-text,
-  .presupuesto-text {
-    font-size: 10px; 
-    font-weight: bold;
-  }
-  
-  
-  
   
 /* Cierre Container Services ← ← ← */
 
@@ -451,7 +456,6 @@ button:focus {
     backdrop-filter: blur(6px);
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
 }
 
@@ -642,6 +646,10 @@ button:focus {
     font-size: 30px;
     font-weight: 400;
 }
+.nav a {
+    color: white;
+    border-style: none;
+}
 /* Fin List */
 
 /* Copyrigth */
@@ -656,3 +664,45 @@ button:focus {
 }
 /* Fin Copyrigth */
 /* Cierre Container Footer ← ← ← */
+
+/* Animaciones */
+
+/* About */
+@keyframes AnimRight {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes AnimLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes AnimSquare {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(2rem);
+    }
+}
+
+
+/* Fin About */
+
+/* Fin Animaciones */
