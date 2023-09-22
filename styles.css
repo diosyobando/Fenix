@@ -113,6 +113,9 @@ button:focus {
     left: 100px; /* Ajusta el espaciado desde el borde izquierdo */
     transform: translateY(-50%); /* Corrige la alineación vertical */
     text-align: left;
+    opacity: 0; /* Inicialmente, establece la opacidad en 0 para ocultar el texto */
+    transform: translateY(-50px); /* Mueve el texto hacia arriba */
+    transition: opacity 0.5s, transform 0.5s; /* Transición para opacidad y transformación */
 }
 
 .container-main .light-text {
@@ -141,44 +144,68 @@ button:focus {
     transition: width 0.5s; /* Transición suave para el cambio de ancho */
     clip-path:  polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 33%);
     backdrop-filter: blur(16px);
-  }
-  
-  /* Estilo para los párrafos dentro de "subtitle" */
-  .container-main .subtitle p {
+    opacity: 0; /* Inicialmente, establece la opacidad en 0 para ocultar el texto */
+    transform: translateY(50px); /* Mueve el texto hacia abajo */
+    transition: opacity 0.5s, transform 0.5s; /* Transición para opacidad y transformación */
+}
+
+/* Estilo para los párrafos dentro de "subtitle" */
+.container-main .subtitle p {
     margin: 0; /* Elimina el margen predeterminado */
     font-size: 1rem; /* Tamaño de fuente inicial relativo */
-  }
+}
 
-  /* Estilo para el primer párrafo "sub1" */
-  .container-main .sub1 {
+/* Establecer el ancho completo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .subtitle {
+        width: 100%; /* Hacer que el div ocupe todo el ancho de la pantalla */
+    }
+}
+
+/* Define animaciones para los textos */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplica animaciones cuando se carga la página */
+.container-main .title {
+    animation: fadeInUp 1s ease-in-out 0.5s forwards; /* Inicia la animación después de 0.5 segundos */
+}
+
+.container-main .subtitle {
+    animation: fadeInUp 1s ease-in-out 1s forwards; /* Inicia la animación después de 1 segundo */
+}
+
+/* Estilo para el primer párrafo "sub1" */
+.container-main .sub1 {
     position: relative;
     float: left; /* Hace que este párrafo se coloque a la izquierda del segundo párrafo */
     width: 50%; /* Ocupa inicialmente el 50% del ancho del div "subtitle" */
     clear: none; /* Elimina el efecto clear para que los párrafos estén uno al lado del otro */
-    top: 10px; 
+    top: 10px;
     font-weight: 400;
     font-family: 'Inter', sans-serif;
     align-items: center;
     text-align: center;
     color: white;
-  }
-  
-  .container-main  .sub2 {
+}
+
+.container-main .sub2 {
     float: left; /* Hace que este párrafo se coloque a la izquierda del primer párrafo */
     width: 50%; /* Ocupa inicialmente el 50% del ancho del div "subtitle" */
     clear: none; /* Elimina el efecto clear para que los párrafos estén uno al lado del otro */
     font-family: 'Inter', sans-serif;
     color: white;
     text-align: justify;
-  }
-  
-  
-  /* Establecer el ancho completo para pantallas pequeñas */
-  @media (max-width: 768px) {
-    .subtitle {
-      width: 100%; /* Hacer que el div ocupe todo el ancho de la pantalla */
-    }
-  }
+}
+
   
 /* Cierre Container Main ← ← ← */
 
