@@ -68,10 +68,12 @@ button:focus {
 .container-main .logo img {
     max-width: 100px;
     height: auto;
-    margin-top: 10px; 
-    margin-left: 20px; 
-    cursor: pointer; 
+    margin-top: 10px; /* Agregar margen superior */
+    margin-left: 20px; /* Agregar margen izquierdo */
+    cursor: pointer; /* Cambiar el cursor al hacer clic en el logo */
 }
+
+
 
 /* Estilos para la barra de navegación */
 .container-main nav ul {
