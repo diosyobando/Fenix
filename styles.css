@@ -8,6 +8,7 @@
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
     text-decoration: none;
+    
 }
 
 button {
@@ -38,6 +39,7 @@ button:focus {
     position: relative;
     width: 100%;
     height: 100vh;
+    
 }
 
 /* Estilos para el video de fondo */
@@ -75,8 +77,12 @@ button:focus {
     cursor: pointer; /* Cambiar el cursor al hacer clic en el logo */
 }
 
-.container-main nav ul li {
-    font-size: 16px; /* Tamaño de fuente para los elementos de navegación */   
+@media (max-width: 768px) {
+    .container-main .logo img {
+        max-width: 40px; /* Ajusta el tamaño máximo de la imagen para móviles */
+        margin-top: 5px; /* Ajusta el margen superior para móviles */
+        margin-left: 10px; /* Ajusta el margen izquierdo para móviles */
+    }
 }
 
 
@@ -111,15 +117,15 @@ button:focus {
     transition: border-bottom 0.3s ease;
 }
 
-/* Responsive */
-.icons {
-    font-size: 2.8rem;
-    color: white;
-    cursor: pointer;
-    display: none;
-}
-/* Fin Responsive */
+@media (max-width: 768px) {
+    .container-main nav ul li {
+        font-size: 10px; /* Ajusta el tamaño de fuente para móviles */
+    }
 
+    .container-main nav ul li a {
+        margin-right: 50px; /* Ajusta el margen derecho para móviles */
+    }
+}
 
 /* Estilos para los párrafos */
 .container-main .title {
@@ -146,6 +152,24 @@ button:focus {
     white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+    .container-main .title {
+        top: 20%;
+        left: 20px;
+        text-align: center;
+        transform: translateY(0);
+    }
+
+    .container-main .light-text {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .container-main .bold-text {
+        font-size: 40px;
+    }
+}
+
 /* Estilo para el div "subtitle" */
 .container-main .subtitle {
     background: rgba(255, 255, 255, .1);
@@ -164,6 +188,13 @@ button:focus {
 
 }
 
+@media (max-width: 768px) {
+    .container-main .subtitle {
+        width: 100%; /* Hacer que el div ocupe todo el ancho de la pantalla en dispositivos móviles */
+        padding: 10px; /* Reducir el espacio de relleno en dispositivos móviles */
+    }
+}
+
 /* Estilo para los párrafos dentro de "subtitle" */
 .container-main .subtitle p {
     margin: 0; 
@@ -171,10 +202,9 @@ button:focus {
     
 }
 
-/* Establecer el ancho completo para pantallas pequeñas */
 @media (max-width: 768px) {
-    .subtitle {
-        width: 100%; /* Hacer que el div ocupe todo el ancho de la pantalla */
+    .container-main .subtitle p {
+        font-size: 0.6rem; /* Tamaño de fuente más pequeño para dispositivos móviles */
     }
 }
 
@@ -230,8 +260,9 @@ button:focus {
 /* → → → Container About */
 .container-about {
     position: relative;
-    margin: 50px 0;
+    margin: 50px 0 0;
     height: 100vh;
+    background-color: #170029;
 }
 
 .center-content {
@@ -281,6 +312,22 @@ button:focus {
     font-family: 'Inter', sans-serif;
     z-index: 5;
 }
+
+@media (max-width: 768px) {
+    .container-about .square-background .title {
+        font-size: 2rem; 
+        text-align: center;
+        left: 0; 
+    }
+
+    .container-about .square-background .p1 {
+        font-size: 0.8rem; 
+        text-align: center; 
+        left: 0; 
+        top: 2rem; 
+    }
+}
+
 /* Fin Cuadro de informacion */
 
 /* Imagenes de Fondo */
@@ -299,9 +346,21 @@ button:focus {
 }
 
 .container-about .engineer {
-    max-width: 45%;
+    position: relative;
+    max-width: 55%;
     height: 100vh;
     animation: AnimRight 2s ease 0s 1 normal forwards;
+}
+
+@media (max-width: 768px) {
+    .container-about .fenix {
+        display: none; /* Ocultar la imagen "fenix" en dispositivos móviles */
+    }
+
+    .container-about .engineer {
+        max-width: 30%; /* Reducir el tamaño de la imagen "engineer" en dispositivos móviles */
+        height: auto; /* Permitir que la altura se ajuste automáticamente */
+    }
 }
 /* Fin Imagenes de Fondo */
 
@@ -322,6 +381,7 @@ button:focus {
     width: 100%;
     height: 140vh;
     padding: 3rem 0;
+    background-color: #170029;
   }
   .container-pm {
     animation: none; /* Desactiva la animación inicialmente */
@@ -332,7 +392,7 @@ button:focus {
   /* Project Management */
   .container-pm .services-background {
     position: absolute;
-    top: 7.5rem;
+    top: 5.2rem;
     right: 0;
     width: 65rem;
     height: 19rem;
@@ -405,6 +465,7 @@ button:focus {
   }
 .container-pm .iconBar p {
     text-align: center;
+    width: 80%;
   }
   
 .container-pm .iconBar .item {
@@ -431,7 +492,7 @@ button:focus {
 
 .container-gc .services-background {
     position: absolute;
-    top: 45rem;
+    top: 42rem;
     left: 0;
     width: 65rem;
     height: 19rem;
@@ -496,6 +557,7 @@ button:focus {
   }
 .container-gc .iconBar p {
     text-align: center;
+    width: 60%;
   }
   
 .container-gc .iconBar .item {
@@ -518,6 +580,7 @@ button:focus {
 /* → → → Container Contact */
 .container-contact {
     position: relative;
+    background-color: #170029;
 }
 
 /* Cuadrado de contacto */
